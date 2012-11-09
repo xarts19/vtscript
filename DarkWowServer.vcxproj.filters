@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{e91604b6-a61b-40b3-9a9d-e63830099793}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{061456ac-8b8b-4da4-93db-b4dba9feec62}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{f9d32ae2-d085-4a49-a34b-a72f87bdf57e}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{c345c357-fc09-4f15-ab9b-048b65015135}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+    </Filter>
+    <Filter Include="ScriptEngine">
+      <UniqueIdentifier>{2689665a-df67-4293-b296-379d026b8c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{a83f855c-b528-4a9e-9335-7ae7f77a8bfc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <UIC Include="ScriptingConsole.ui">
+      <Filter>Form Files</Filter>
+    </UIC>
+    <UIC Include="Gui.ui">
+      <Filter>Form Files</Filter>
+    </UIC>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ScriptEngine\AST.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\Builtin.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\Checker.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\Interpreter.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\Objects.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\Token.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine\ScriptParser.cpp">
+      <Filter>ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Highlighter.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingConsole.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="DebugTools.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Gui.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Highlighter.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ScriptingConsole.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\qrc_Gui.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Gui.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Highlighter.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ScriptingConsole.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\qrc_Gui.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScriptEngine\AST.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Builtin.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Checker.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Enums.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Errors.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Interpreter.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Objects.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\Token.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine\ScriptParser.h">
+      <Filter>ScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugTools.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_Gui.hpp">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ScriptingConsole.hpp">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MOC Include="Gui.hxx">
+      <Filter>Interface</Filter>
+    </MOC>
+    <MOC Include="Highlighter.hxx">
+      <Filter>Interface</Filter>
+    </MOC>
+    <MOC Include="ScriptingConsole.hxx">
+      <Filter>Interface</Filter>
+    </MOC>
+  </ItemGroup>
+  <ItemGroup>
+    <QRC Include="Gui.qrc">
+      <Filter>Resource Files</Filter>
+    </QRC>
+  </ItemGroup>
+</Project>
