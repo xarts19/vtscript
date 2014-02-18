@@ -1,23 +1,27 @@
-#include "ScriptingConsole.hxx"
+#include "ScriptingConsole.h"
+
+#include "ui_ScriptingConsole.h"
 
 #include "ScriptEngine/ScriptParser.h"
 
 #include <QDebug>
 
-ScriptingConsole::ScriptingConsole(QWidget *parent, Qt::WFlags flags)
-	: QMainWindow(parent, flags), running_script(NULL)
+ScriptingConsole::ScriptingConsole(QWidget *parent, Qt::WindowFlags flags)
+    : QMainWindow(parent, flags)
+    , ui(new Ui::ScriptingConsoleClass)
+    , running_script(NULL)
 {
-	ui.setupUi(this);
+    ui->setupUi(this);
 
-    connect(ui.btn_execute, SIGNAL(clicked()), this, SLOT(execute_script()));
+    connect(ui->btn_execute, SIGNAL(clicked()), this, SLOT(execute_script()));
 
     QFont font;
     font.setFamily("Courier");
     font.setFixedPitch(true);
     font.setPointSize(10);
-    ui.script_edit->setFont(font);
-    ui.script_edit->setTabStopWidth( QFontMetrics(font).width( " " ) * TAB_SIZE );
-    new Highlighter(ui.script_edit->document());
+    ui->script_edit->setFont(font);
+    ui->script_edit->setTabStopWidth( QFontMetrics(font).width( " " ) * TAB_SIZE );
+    new Highlighter(ui->script_edit->document());
 }
 
 ScriptingConsole::~ScriptingConsole()
@@ -42,7 +46,7 @@ void ScriptingConsole::execute_script()
         if (running_script && running_script->is_finished())
             delete running_script;
 
-        VTScript::AST::Node* ast = VTScript::Parser::parse( ui.script_edit->toPlainText() );
+        VTScript::AST::Node* ast = VTScript::Parser::parse( ui->script_edit->toPlainText() );
         if (ast == NULL)
             return;
         running_script = new VTScript::Interpreter(ast);

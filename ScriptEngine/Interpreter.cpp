@@ -91,7 +91,7 @@ void Interpreter::run()
     __is_finished = true;
 }
 
-void Interpreter::visit(AST::Noop* node)
+void Interpreter::visit(AST::Noop* /*node*/)
 {
     if (__is_terminated) throw InterruptError();
 
@@ -238,14 +238,14 @@ void Interpreter::visit(AST::Return* node)
     //__return_value is propagated further from expression
 }
 
-void Interpreter::visit(AST::Continue* node)
+void Interpreter::visit(AST::Continue* /*node*/)
 {
     if (__is_terminated) throw InterruptError();
 
     __is_set_continue = true;
 }
 
-void Interpreter::visit(AST::Break* node)
+void Interpreter::visit(AST::Break* /*node*/)
 {
     if (__is_terminated) throw InterruptError();
 

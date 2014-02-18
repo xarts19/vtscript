@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QtGui>
+#include <QPlainTextEdit>
 #include <QString>
 #include <QList>
 
@@ -19,7 +19,7 @@ class DebugOutput
 public:
     static int output_line_limit;
     static QPlainTextEdit* sink;
-    static void debugMessageDisplayFunc(QtMsgType type, const char *msg);
+    static void debugMessageDisplayFunc(QtMsgType type, const QMessageLogContext& ctx, const QString& msg);
 };
 
 

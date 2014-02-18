@@ -1,23 +1,25 @@
 #ifndef SCRIPTINGCONSOLE_H
 #define SCRIPTINGCONSOLE_H
 
-#include "Highlighter.hxx"
+#include "Highlighter.h"
 #include "ScriptEngine/Interpreter.h"
 
-#include "ui_ScriptingConsole.hpp"
+#include <QMainWindow>
 
-#include <QtGui/QMainWindow>
+namespace Ui {
+    class ScriptingConsoleClass;
+}
 
 class ScriptingConsole : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	ScriptingConsole(QWidget *parent = 0, Qt::WFlags flags = 0);
+    ScriptingConsole(QWidget *parent = 0, Qt::WindowFlags flags = 0);
 	~ScriptingConsole();
 
 private:
-	Ui::ScriptingConsoleClass ui;
+    Ui::ScriptingConsoleClass* ui;
     VTScript::Interpreter* running_script;
 
 private slots:

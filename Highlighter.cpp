@@ -1,4 +1,4 @@
-#include "Highlighter.hxx"
+#include "Highlighter.h"
  
 #include <QtGui>
 

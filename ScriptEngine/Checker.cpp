@@ -35,11 +35,11 @@ bool Checker::is_inside_loop()
     return false;
 }
 
-void Checker::visit(AST::Noop* node)
+void Checker::visit(AST::Noop* /*node*/)
 {
 }
 
-void Checker::visit(AST::Leaf* node)
+void Checker::visit(AST::Leaf* /*node*/)
 {
 }
 

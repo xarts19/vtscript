@@ -29,7 +29,7 @@ QString PrintNodeVisitor::print(Node* root)
     return result_string_list.join("");
 }
 
-void PrintNodeVisitor::visit(AST::Noop* node)
+void PrintNodeVisitor::visit(AST::Noop* /*node*/)
 {
     result_string_list << QString(indents.top() * TAB_SIZE, ' ') << "Noop";
 }
@@ -93,14 +93,14 @@ void PrintNodeVisitor::visit(AST::Return* node)
 }
 
 // <indent> continue
-void PrintNodeVisitor::visit(AST::Continue* node)
+void PrintNodeVisitor::visit(AST::Continue* /*node*/)
 {
     result_string_list << QString(indents.top() * TAB_SIZE, ' ');
     result_string_list << "continue";
 }
 
 // <indent> break
-void PrintNodeVisitor::visit(AST::Break* node)
+void PrintNodeVisitor::visit(AST::Break* /*node*/)
 {
     result_string_list << QString(indents.top() * TAB_SIZE, ' ');
     result_string_list << "break";

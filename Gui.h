@@ -1,25 +1,26 @@
-#ifndef DARKWOWGUI_H
-#define DARKWOWGUI_H
+#pragma once
 
-#include "ui_Gui.hpp"
-
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
 #include <QPlainTextEdit>
 #include <QSortFilterProxyModel>
 #include <QTime>
 #include <QThread>
 #include <QString>
 
-class ServerGui : public QMainWindow
+namespace Ui {
+    class GuiClass;
+}
+
+class Gui : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    ServerGui( QWidget* parent = 0, Qt::WFlags flags = 0 );
-    ~ServerGui();
+    Gui( QWidget* parent = 0, Qt::WindowFlags flags = 0 );
+    ~Gui();
 
 private:
-    Ui::GuiClass ui;
+    Ui::GuiClass* ui;
 
 private:
     void set_up_debug_widget();
@@ -34,5 +35,3 @@ private slots:
     
     void update_debug_widget();
 };
-
-#endif // DARKWOWGUI_H
